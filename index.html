@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Piotr Ożóg – Korepetycje</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      color: #4CAF50;
+    }
+    .contact-box, .form-box {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-top: 1rem;
+    }
+    form input, form textarea, form select, form button {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    form button {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    form button:hover {
+      background-color: #45a049;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f0f0f0;
+      font-size: 0.9rem;
+    }
+    img.profile {
+      max-width: 160px;
+      border-radius: 12px;
+      float: right;
+      margin-left: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Piotr Ożóg</h1>
+    <p>Korepetycje z chemii i biologii – przygotowanie do matury</p>
+  </header>
+
+  <section class="section">
+    <h2>O mnie</h2>
+    <div class="contact-box">
+      <img src="foto.jpg" alt="Piotr Ożóg" class="profile">
+      <p>Jestem studentem II roku kierunku lekarskiego. W liceum zostałem laureatem olimpiad chemicznych organizowanych przez AGH oraz UJ. Mam pięcioletnie doświadczenie w udzielaniu korepetycji.</p>
+      <p>Pomagam zarówno w bieżącym materiale, jak i w kompleksowym przygotowaniu do matury z <strong>chemii</strong> oraz <strong>biologii</strong>.</p>
+      <p>Udzielam lekcji wyłącznie <strong>online</strong>.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Oferta</h2>
+    <div class="contact-box">
+      <ul>
+        <li>✔ Przygotowanie do matury z chemii</li>
+        <li>✔ Przygotowanie do matury z biologii</li>
+        <li>✔ Pomoc w bieżącym materiale z chemii i biologii (szkoła średnia)</li>
+        <li>✔ Lekcje online – przez Zoom/Google Meet</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Zarezerwuj zajęcia</h2>
+    <div class="form-box">
+      <form action="https://formsubmit.co/piotrek.ozog11@gmail.com" method="POST">
+  <input type="hidden" name="_next" value="thankyou.html">
+        <label for="name">Imię i nazwisko</label>
+        <input type="text" id="name" name="Imię i nazwisko" required>
+
+        <label for="phone">Numer telefonu</label>
+        <input type="tel" id="phone" name="Telefon" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="Email" required>
+
+        <label for="subject">Przedmiot</label>
+        <select id="subject" name="Przedmiot" required>
+          <option value="">-- Wybierz przedmiot --</option>
+          <option value="Chemia">Chemia</option>
+          <option value="Biologia">Biologia</option>
+        </select>
+
+        <label for="message">Dodatkowe informacje (opcjonalnie)</label>
+        <textarea id="message" name="Dodatkowe informacje" rows="4" placeholder="Np. poziom nauczania, preferowane godziny, inne uwagi..."></textarea>
+
+        <button type="submit">Zarezerwuj zajęcia</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Kontakt</h2>
+    <div class="contact-box">
+      <p><strong>E-mail:</strong> <a href="mailto:piotrek.ozog11@gmail.com">piotrek.ozog11@gmail.com</a></p>
+      <p><strong>Telefon:</strong> <a href="tel:698344977">698 344 977</a></p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Piotr Ożóg – Korepetycje z chemii i biologii
+  </footer>
+
+</body>
+</html>
