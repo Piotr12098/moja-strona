@@ -8,23 +8,66 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #f0f9f3;
       color: #333;
     }
+
     header {
       background-color: #4CAF50;
       color: white;
-      padding: 1rem; /* zmniejszony padding */
-      text-align: center;
+      padding: 1.5rem;
     }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .header-left {
+      text-align: left;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .header-right {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 1rem;
+    }
+
+    .top-button {
+      margin-top: 0.5rem;
+      padding: 0.6rem 1rem;
+      background-color: white;
+      color: #4CAF50;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 2px solid white;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .top-button:hover {
+      background-color: #fff;
+      color: #388e3c;
+    }
+
     .section {
       padding: 2rem;
       max-width: 900px;
       margin: 0 auto;
     }
+
     .section h2 {
       color: #4CAF50;
     }
+
     .contact-box, .form-box {
       background-color: #fff;
       padding: 1.5rem;
@@ -32,6 +75,7 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       margin-top: 1rem;
     }
+
     form input, form textarea, form select, form button {
       width: 100%;
       padding: 0.8rem;
@@ -41,59 +85,39 @@
       border-radius: 8px;
       font-size: 1rem;
     }
+
     form button {
       background-color: #4CAF50;
       color: white;
       cursor: pointer;
       transition: background-color 0.3s;
     }
+
     form button:hover {
       background-color: #45a049;
     }
+
     footer {
       text-align: center;
       padding: 1rem;
       background-color: #f0f0f0;
       font-size: 0.9rem;
     }
-    .about-img {
-      max-width: 180px;
-      float: right;
+
+    img.profile {
+      max-width: 160px;
       border-radius: 12px;
+      float: right;
       margin-left: 1rem;
+    }
+
+    .highlight-text {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #2f7c44;
       margin-bottom: 1rem;
     }
-    .top-button {
-      margin-top: 1rem;
-      display: inline-block;
-      padding: 0.6rem 1.2rem;
-      background-color: white;
-      color: #4CAF50;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      border: 2px solid white;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    .top-button:hover {
-      background-color: #fff;
-      color: #388e3c;
-    }
-    .intro {
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: #333;
-      text-align: center;
-      margin: 2rem auto 0;
-      max-width: 700px;
-    }
-    .highlight {
-      font-size: 1.6rem;
-      color: #4CAF50;
-      text-align: center;
-      font-weight: bold;
-      margin-top: 0.5rem;
-    }
+
     .pricing-item {
       background-color: #e6f7ec;
       padding: 1rem;
@@ -102,42 +126,52 @@
       font-size: 1.05rem;
       transition: transform 0.3s ease;
     }
+
     .pricing-item:hover {
       transform: scale(1.03);
+    }
+
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Piotr Ożóg</h1>
-    <p>Korepetycje z chemii i biologii – przygotowanie do matury</p>
-    <strong style="font-size: 1.1rem;">📞 698 344 977</strong><br>
-    <a href="#formularz" class="top-button">Chcę się zapisać</a>
+    <div class="header-container">
+      <div class="header-left">
+        <h1>Piotr Ożóg</h1>
+        <p>Korepetycje z chemii i biologii – przygotowanie do matury</p>
+        <strong style="font-size: 1.1rem;">📞 698 344 977</strong>
+      </div>
+      <div class="header-right">
+        <a href="#formularz" class="top-button">Chcę się zapisać</a>
+        <a href="#cennik" class="top-button">Cennik</a>
+        <a href="#o-mnie" class="top-button">O mnie</a>
+        <a href="#kontakt" class="top-button">Kontakt</a>
+      </div>
+    </div>
   </header>
 
-  <div class="intro">Twoja pomoc w przygotowaniu do egzaminów</div>
-  <div class="highlight">Wspólnie możemy osiągnąć Twój cel!</div>
-
   <section class="section">
-    <h2>O mnie</h2>
+    <h2>Twoja pomoc w przygotowaniu do egzaminów</h2>
     <div class="contact-box">
-      <img src="foto.jpg" alt="Piotr Ożóg" class="about-img">
-      <p>Jestem studentem <strong>II roku kierunku lekarskiego</strong>. W liceum zostałem laureatem dwóch olimpiad chemicznych organizowanych przez <strong>AGH</strong> oraz <strong>UJ</strong>. Korepetycji udzielam już od <strong>5 lat</strong>, pomagając uczniom z całej Polski osiągać świetne wyniki na maturze.</p>
-      <p>Mogę się pochwalić tym, że moja zeszłoroczna uczennica została <strong>finalistką olimpiady biologicznej</strong> dla szkół podstawowych.</p>
-      <p>Prowadzę również kanał na YouTube, gdzie w przystępny sposób omawiam zagadnienia z chemii. <a href="https://www.youtube.com/@pietja731" target="_blank">Zajrzyj na mój kanał →</a></p>
+      <p class="highlight-text">Zapraszam was na zajęcia z chemii oraz biologii. Wspólnie możemy osiągnąć <strong>Twój cel!</strong></p>
     </div>
   </section>
 
-  <section class="section">
-    <h2>Oferta</h2>
-    <div class="contact-box">
-      <ul>
-        <li>✔ Przygotowanie do matury z chemii</li>
-        <li>✔ Przygotowanie do matury z biologii</li>
-        <li>✔ Pomoc w bieżącym materiale z chemii i biologii (szkoła średnia)</li>
-        <li>✔ Lekcje online – przez Zoom/Google Meet</li>
-      </ul>
+  <section class="section" id="o-mnie">
+    <h2>O mnie</h2>
+    <div class="contact-box clearfix">
+      <img src="foto.jpg" alt="Piotr Ożóg" class="profile">
+      <p>Jestem studentem II roku kierunku lekarskiego.</p>
+      <p>Jestem laureatem dwóch olimpiad chemicznych organizowanych przez AGH oraz UJ.</p>
+      <p>Od 5 lat pomagam uczniom przygotować się do matury z chemii i biologii.</p>
+      <p>Mogę się pochwalić tym, że moja zeszłoroczna uczennica została finalistką Olimpiady Biologicznej dla szkół podstawowych.</p>
+      <p>Prowadzę również kanał na YouTube, na którym omawiam materiał z chemii – <a href="https://www.youtube.com/@pietja731" target="_blank">sprawdź mój kanał</a>.</p>
     </div>
   </section>
 
@@ -172,7 +206,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="cennik">
     <h2>Cennik</h2>
     <div class="contact-box">
       <div class="pricing-item">✔ Cena za 60 minut zajęć: 90 zł</div>
@@ -185,7 +219,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="kontakt">
     <h2>Kontakt</h2>
     <div class="contact-box">
       <p><strong>E-mail:</strong> <a href="mailto:piotrek.ozog11@gmail.com">piotrek.ozog11@gmail.com</a></p>
