@@ -11,7 +11,7 @@
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f0f9f3;
       color: #333;
     }
@@ -125,6 +125,26 @@
       display: table;
       clear: both;
     }
+
+    /* Nowy styl dla komunikatu nad formularzem */
+    .info-above-form {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #2f7c44;
+      background-color: #e6f7ec;
+      padding: 1rem 1.2rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      font-family: 'Georgia', serif;
+      line-height: 1.4;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(47,124,68,0.15);
+    }
+
+    .info-above-form strong {
+      font-weight: 700;
+      color: #1b4d27;
+    }
   </style>
 </head>
 <body>
@@ -162,6 +182,12 @@
 
   <section class="section" id="formularz">
     <h2>Zarezerwuj zajęcia</h2>
+
+    <div class="info-above-form">
+      Jeśli chciałbyś omówić się na pierwsze zajęcia, wypełnij ten formularz lub zadzwoń na numer <strong>698 344 977</strong>.<br>
+      <strong>Pierwsza lekcja jest całkowicie darmowa.</strong>
+    </div>
+
     <div class="form-box">
       <form action="https://formsubmit.co/piotrek.ozog11@gmail.com" method="POST">
         <input type="hidden" name="_redirect" value="https://piotr12098.github.io/moja-strona/thankyou.html">
@@ -189,10 +215,6 @@
         <button type="submit">Zarezerwuj zajęcia</button>
       </form>
     </div>
-    <p style="margin-top: 1rem; font-size: 1.1rem;">
-      Jeśli chciałbyś omówić się na pierwsze zajęcia, wypełnij ten formularz lub zadzwoń na numer <strong>698 344 977</strong>.<br>
-      <strong>Pierwsza lekcja jest całkowicie darmowa.</strong>
-    </p>
   </section>
 
   <section class="section" id="cennik">
