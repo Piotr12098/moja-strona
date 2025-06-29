@@ -17,19 +17,30 @@
       color: white;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       padding: 1rem 2rem;
       min-height: 150px;
+      gap: 1.5rem;
     }
 
-    /* Lewa część nagłówka z tekstem i przyciskami */
+    /* Zdjęcie po lewej stronie */
+    .header-photo {
+      flex-shrink: 0;
+    }
+
+    .header-photo img {
+      width: 168px; /* powiększone o ~30% */
+      height: auto;
+      border-radius: 12px;
+    }
+
+    /* Tekst i przyciski po prawej, wyśrodkowane */
     .header-text {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      flex: 1;
       gap: 0.8rem;
     }
 
@@ -75,17 +86,6 @@
     .top-button:hover {
       background-color: #fff;
       color: #388e3c;
-    }
-
-    /* Zdjęcie po prawej stronie */
-    .header-photo {
-      flex-shrink: 0;
-    }
-
-    .header-photo img {
-      width: 168px; /* powiększone o ~30% */
-      height: auto;
-      border-radius: 12px;
     }
 
     /* Sekcje strony */
@@ -188,6 +188,9 @@
 <body>
 
   <header>
+    <div class="header-photo">
+      <img src="foto2.png" alt="Foto2" />
+    </div>
     <div class="header-text">
       <h1>Piotr Ożóg</h1>
       <p>Korepetycje z chemii i biologii – przygotowanie do matury</p>
@@ -198,9 +201,6 @@
         <a href="#o-mnie" class="top-button">O mnie</a>
         <a href="#kontakt" class="top-button">Kontakt</a>
       </div>
-    </div>
-    <div class="header-photo">
-      <img src="foto2.jpg" alt="Foto2" />
     </div>
   </header>
 
@@ -278,52 +278,6 @@
       <p>✉ E-mail: <a href="mailto:piotrek.ozog11@gmail.com">piotrek.ozog11@gmail.com</a></p>
       <p>🏠 Lokalizacja: Kraków, Polska</p>
     </div>
-  </section>
-
-</body>
-</html>
-
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="header-text">
-      <h1>Piotr Ożóg</h1>
-      <p>Korepetycje z chemii i biologii – przygotowanie do matury</p>
-      <strong>📞 698 344 977</strong>
-      <div class="nav-buttons">
-        <a href="#formularz" class="top-button">Chcę się zapisać</a>
-        <a href="#cennik" class="top-button">Cennik</a>
-        <a href="#o-mnie" class="top-button">O mnie</a>
-        <a href="#kontakt" class="top-button">Kontakt</a>
-      </div>
-    </div>
-    <div class="header-photo">
-      <img src="foto2.jpg" alt="Foto2" />
-    </div>
-  </header>
-
-  <section id="formularz">
-    <h2>Zarezerwuj zajęcia</h2>
-    <!-- dalsza treść... -->
-  </section>
-
-  <section id="cennik">
-    <h2>Cennik</h2>
-    <!-- cennik -->
-  </section>
-
-  <section id="o-mnie">
-    <h2>O mnie</h2>
-    <!-- o mnie -->
-  </section>
-
-  <section id="kontakt">
-    <h2>Kontakt</h2>
-    <!-- kontakt -->
   </section>
 
 </body>
