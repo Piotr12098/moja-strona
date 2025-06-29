@@ -28,7 +28,7 @@
       box-sizing: border-box;
     }
 
-    /* Zdjęcie po lewej i prawej stronie */
+    /* Zdjęcie po lewej stronie */
     .header-photo {
       flex-shrink: 0;
     }
@@ -37,6 +37,15 @@
       width: 168px; /* powiększone o ~30% */
       height: auto;
       border-radius: 12px;
+    }
+
+    /* Kwadrat po prawej stronie zamiast zdjęcia */
+    .right-placeholder {
+      width: 168px;
+      height: 168px; /* kwadrat o wysokości równej szerokości */
+      background-color: #f0f9f3;
+      border-radius: 12px;
+      flex-shrink: 0;
     }
 
     /* Kontener na tekst i przyciski - wyśrodkowany */
@@ -215,9 +224,8 @@
       </div>
     </div>
 
-    <div class="header-photo">
-      <img src="foto2.png" alt="Foto2" />
-    </div>
+    <!-- Zamiast zdjęcia po prawej, kwadrat w kolorze tła -->
+    <div class="right-placeholder"></div>
   </header>
 
   <section>
