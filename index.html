@@ -24,12 +24,11 @@
       padding: 1rem 2rem;
       min-height: 150px;
       gap: 1.5rem;
-      /* Kontener, który rozciąga się na całą szerokość */
       width: 100%;
       box-sizing: border-box;
     }
 
-    /* Zdjęcie po lewej stronie */
+    /* Zdjęcie po lewej i prawej stronie */
     .header-photo {
       flex-shrink: 0;
     }
@@ -40,7 +39,7 @@
       border-radius: 12px;
     }
 
-    /* Kontener na tekst i przyciski - szerokość i centrowanie */
+    /* Kontener na tekst i przyciski - wyśrodkowany */
     .header-text-container {
       flex: 1;
       display: flex;
@@ -102,7 +101,6 @@
       color: #388e3c;
     }
 
-    /* Sekcje strony */
     section {
       padding: 2rem;
       max-width: 900px;
@@ -150,7 +148,6 @@
       background-color: #45a049;
     }
 
-    /* Styl cennika */
     .pricing-item {
       background-color: #e6f7ec;
       padding: 1rem;
@@ -164,7 +161,6 @@
       transform: scale(1.03);
     }
 
-    /* Styl dla komunikatu nad formularzem */
     .info-above-form {
       font-size: 1.2rem;
       font-weight: 600;
@@ -184,7 +180,6 @@
       color: #1b4d27;
     }
 
-    /* Obrazek profilowy w o mnie */
     img.profile {
       max-width: 160px;
       border-radius: 12px;
@@ -205,6 +200,7 @@
     <div class="header-photo">
       <img src="foto2.png" alt="Foto2" />
     </div>
+
     <div class="header-text-container">
       <div class="header-text">
         <h1>Piotr Ożóg</h1>
@@ -217,6 +213,10 @@
           <a href="#kontakt" class="top-button">Kontakt</a>
         </div>
       </div>
+    </div>
+
+    <div class="header-photo">
+      <img src="foto2.png" alt="Foto2" />
     </div>
   </header>
 
@@ -292,6 +292,7 @@
     <div class="contact-box">
       <p>📞 Telefon: <a href="tel:+48698344977">698 344 977</a></p>
       <p>✉ E-mail: <a href="mailto:piotrek.ozog11@gmail.com">piotrek.ozog11@gmail.com</a></p>
+      <p>🏠 Lokalizacja: Kraków, Polska</p>
     </div>
   </section>
 
