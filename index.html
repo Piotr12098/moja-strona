@@ -25,16 +25,12 @@
       justify-content: center;
       gap: 1rem;
       flex-wrap: wrap;
-      /* ustawiam minimalną wysokość nagłówka odpowiadającą powiększonemu logo */
-      min-height: 145px; /* ok. 90px * 1.62 */
-      box-sizing: border-box;
     }
 
     .header-logo {
-      height: 145px; /* powiększone o 62% względem oryginalnych 90px */
+      height: 108px; /* powiększone o 40% względem 90px */
       width: auto;
       margin-right: 1.5rem;
-      flex-shrink: 0;
     }
 
     .header-content {
@@ -84,6 +80,7 @@
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       margin-top: 1rem;
+      overflow: visible;
     }
 
     form input, form textarea, form select, form button {
@@ -115,10 +112,11 @@
     }
 
     img.profile {
-      max-width: 160px;
+      max-width: 224px; /* powiększone o 40% względem 160px */
       border-radius: 12px;
       float: right;
-      margin-left: 1rem;
+      margin-left: 2rem; /* przesunięte bardziej w prawo */
+      margin-top: 0.2rem;
     }
 
     .highlight-text {
@@ -131,10 +129,11 @@
     .pricing-item {
       background-color: #e6f7ec;
       padding: 1rem;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
       border-radius: 10px;
       font-size: 1.05rem;
       transition: transform 0.3s ease;
+      word-wrap: break-word;
     }
 
     .pricing-item:hover {
@@ -147,6 +146,7 @@
       clear: both;
     }
 
+    /* Nowy styl dla komunikatu nad formularzem */
     .info-above-form {
       font-size: 1.2rem;
       font-weight: 600;
@@ -194,7 +194,7 @@
   <section class="section" id="o-mnie">
     <h2>O mnie</h2>
     <div class="contact-box clearfix">
-      <img src="foto.jpg" alt="Piotr Ożóg" class="profile" style="width: 224px; height: auto; margin-left: 1.5rem; transform: translateX(15px);">
+      <img src="foto.jpg" alt="Piotr Ożóg" class="profile">
       <p>Jestem studentem II roku kierunku lekarskiego.</p>
       <p>Jestem laureatem dwóch olimpiad chemicznych organizowanych przez AGH oraz UJ.</p>
       <p>Od 5 lat pomagam uczniom przygotować się do matury z chemii i biologii.</p>
@@ -243,22 +243,26 @@
   <section class="section" id="cennik">
     <h2>Cennik</h2>
     <div class="contact-box">
-      <div class="pricing-item">✔ Cena za 60 minut zajęć: 90 zł</div>
-      <div class="pricing-item"><strong>✔ Pierwsza lekcja gratis</strong></div>
-      <div class="pricing-item">✔ Dla wszystkich uczniów – powtórka materiału i odpowiedzi na pytania</div>
+      <ul style="list-style: none; padding-left: 0; margin: 0;">
+        <li class="pricing-item">✔ Cena za 60 minut zajęć: 90 zł</li>
+        <li class="pricing-item"><strong>✔ Pierwsza lekcja gratis</strong></li>
+        <li class="pricing-item">✔ Dla wszystkich uczniów – powtórka materiału i odpowiedzi na pytania</li>
+        <li class="pricing-item">✔ Możliwość zajęć indywidualnych lub w małych grupach</li>
+        <li class="pricing-item">✔ Elastyczne godziny zajęć dopasowane do ucznia</li>
+      </ul>
     </div>
   </section>
 
   <section class="section" id="kontakt">
     <h2>Kontakt</h2>
     <div class="contact-box">
-      <p>Telefon: <strong>698 344 977</strong></p>
-      <p>E-mail: <strong>piotrek.ozog11@gmail.com</strong></p>
+      <p><strong>E-mail:</strong> <a href="mailto:piotrek.ozog11@gmail.com">piotrek.ozog11@gmail.com</a></p>
+      <p><strong>Telefon:</strong> <a href="tel:698344977">698 344 977</a></p>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Piotr Ożóg. Wszelkie prawa zastrzeżone.
+    © 2025 Piotr Ożóg – Korepetycje z chemii i biologii
   </footer>
 
 </body>
