@@ -19,7 +19,7 @@
     header {
       background-color: #4CAF50;
       color: white;
-      padding: 1.5rem;
+      padding: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -29,13 +29,15 @@
 
     .header-logo {
       height: 90%;
+      max-height: 90px; /* ograniczenie maksymalnej wysokości */
       width: auto;
-      max-width: none;
       margin-right: 1.5rem;
     }
 
     .header-content {
       text-align: center;
+      flex: 1 1 auto;
+      min-width: 250px;
     }
 
     .nav-buttons {
@@ -142,6 +144,7 @@
       clear: both;
     }
 
+    /* Nowy styl dla komunikatu nad formularzem */
     .info-above-form {
       font-size: 1.2rem;
       font-weight: 600;
