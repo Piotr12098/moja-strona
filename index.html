@@ -19,22 +19,13 @@
     header {
       background-color: #4CAF50;
       color: white;
-      padding: 1.5rem;
-      text-align: left;
+      padding: 2rem 1rem;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .header-photo {
-      max-width: 120px;
-      border-radius: 12px;
-      flex-shrink: 0;
-    }
-
-    .header-text {
-      flex: 1;
+      justify-content: center;
+      gap: 0.4rem;
+      text-align: center;
     }
 
     .nav-buttons {
@@ -165,17 +156,14 @@
 <body>
 
   <header>
-    <img src="foto1.png" alt="Piotr Ożóg" class="header-photo" />
-    <div class="header-text">
-      <h1>Piotr Ożóg</h1>
-      <p>Korepetycje z chemii i biologii – przygotowanie do matury</p>
-      <strong style="font-size: 1.1rem;">📞 698 344 977</strong>
-      <div class="nav-buttons">
-        <a href="#formularz" class="top-button">Chcę się zapisać</a>
-        <a href="#cennik" class="top-button">Cennik</a>
-        <a href="#o-mnie" class="top-button">O mnie</a>
-        <a href="#kontakt" class="top-button">Kontakt</a>
-      </div>
+    <h1>Piotr Ożóg</h1>
+    <p>Korepetycje z chemii i biologii – przygotowanie do matury</p>
+    <strong style="font-size: 1.2rem;">📞 698 344 977</strong>
+    <div class="nav-buttons">
+      <a href="#formularz" class="top-button">Chcę się zapisać</a>
+      <a href="#cennik" class="top-button">Cennik</a>
+      <a href="#o-mnie" class="top-button">O mnie</a>
+      <a href="#kontakt" class="top-button">Kontakt</a>
     </div>
   </header>
 
@@ -189,12 +177,12 @@
   <section class="section" id="o-mnie">
     <h2>O mnie</h2>
     <div class="contact-box clearfix">
-      <img src="foto.jpg" alt="Piotr Ożóg" class="profile">
+      <img src="foto1.png" alt="Piotr Ożóg" class="profile">
       <p>Jestem studentem II roku kierunku lekarskiego.</p>
       <p>Jestem laureatem dwóch olimpiad chemicznych organizowanych przez AGH oraz UJ.</p>
       <p>Od 5 lat pomagam uczniom przygotować się do matury z chemii i biologii.</p>
       <p>Mogę się pochwalić tym, że moja zeszłoroczna uczennica została finalistką Olimpiady Biologicznej dla szkół podstawowych.</p>
-      <p>Prowadzę również kanał na YouTube, na którym omawiam materiał z chemii – <a href="https://www.youtube.com/@pietja731" target="_blank">sprawdź mój kanał</a>.</p>
+      <p>Prowadzę również kanał na YouTube, na którym omawiam materiał z chemii – <a href="https://www.youtube.com/@pietja731" target="_blank" rel="noopener noreferrer">sprawdź mój kanał</a>.</p>
     </div>
   </section>
 
