@@ -62,13 +62,36 @@
       float: right;
       margin-left: 1rem;
     }
+    .top-button {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: white;
+      color: #4CAF50;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 2px solid white;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .top-button:hover {
+      background-color: #fff;
+      color: #388e3c;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Piotr Ożóg</h1>
-    <p>Korepetycje z chemii i biologii – przygotowanie do matury</p>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <h1>Piotr Ożóg</h1>
+      <p>Korepetycje z chemii i biologii – przygotowanie do matury</p>
+      <div style="margin-top: 1rem;">
+        <strong style="font-size: 1.2rem;">📞 698 344 977</strong>
+        <br />
+        <a href="#formularz" class="top-button">Chcę się zapisać</a>
+      </div>
+    </div>
   </header>
 
   <section class="section">
@@ -93,12 +116,11 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="formularz">
     <h2>Zarezerwuj zajęcia</h2>
     <div class="form-box">
       <form action="https://formsubmit.co/piotrek.ozog11@gmail.com" method="POST">
-        <!-- ✅ Poprawne pole do przekierowania -->
-        <input type="hidden" name="_next" value="https://piotr12098.github.io/moja-strona/thankyou.html">
+        <input type="hidden" name="_redirect" value="https://piotr12098.github.io/moja-strona/thankyou.html">
         <input type="hidden" name="_captcha" value="false">
 
         <label for="name">Imię i nazwisko</label>
