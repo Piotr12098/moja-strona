@@ -11,20 +11,48 @@
       background-color: #f9f9f9;
       color: #333;
     }
+
     header {
       background-color: #4CAF50;
       color: white;
       padding: 2rem;
       text-align: center;
+      position: relative;
     }
+
+    .top-contact {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      text-align: right;
+    }
+
+    .top-contact a {
+      display: inline-block;
+      background-color: white;
+      color: #4CAF50;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      margin-left: 0.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .top-contact a:hover {
+      background-color: #e6f5e6;
+    }
+
     .section {
       padding: 2rem;
       max-width: 900px;
       margin: 0 auto;
     }
+
     .section h2 {
       color: #4CAF50;
     }
+
     .contact-box, .form-box {
       background-color: #fff;
       padding: 1.5rem;
@@ -32,6 +60,7 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       margin-top: 1rem;
     }
+
     form input, form textarea, form select, form button {
       width: 100%;
       padding: 0.8rem;
@@ -41,68 +70,63 @@
       border-radius: 8px;
       font-size: 1rem;
     }
+
     form button {
       background-color: #4CAF50;
       color: white;
       cursor: pointer;
       transition: background-color 0.3s;
     }
+
     form button:hover {
       background-color: #45a049;
     }
+
     footer {
       text-align: center;
       padding: 1rem;
       background-color: #f0f0f0;
       font-size: 0.9rem;
     }
+
     img.profile {
       max-width: 160px;
       border-radius: 12px;
       float: right;
       margin-left: 1rem;
     }
-    .top-button {
+
+    .price-box {
+      background-color: #eafaf1;
+      border-radius: 12px;
+      padding: 1.2rem;
       margin-top: 1rem;
-      display: inline-block;
-      padding: 0.6rem 1.2rem;
-      background-color: white;
-      color: #4CAF50;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      border: 2px solid white;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    .top-button:hover {
-      background-color: #fff;
-      color: #388e3c;
-    }
-    .pricing-item {
-      background-color: #e6f7ec;
-      padding: 1rem;
-      margin-bottom: 1.2rem;
-      border-radius: 10px;
-      font-size: 1.05rem;
       transition: transform 0.3s ease;
     }
-    .pricing-item:hover {
+
+    .price-box:hover {
       transform: scale(1.03);
+    }
+
+    .price-box p {
+      margin: 0.6rem 0;
+      line-height: 1.6;
+    }
+
+    .bold {
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div style="display: flex; flex-direction: column; align-items: center;">
-      <h1>Piotr Ożóg</h1>
-      <p>Korepetycje z chemii i biologii – przygotowanie do matury</p>
-      <div style="margin-top: 1rem;">
-        <strong style="font-size: 1.2rem;">📞 698 344 977</strong>
-        <br />
-        <a href="#formularz" class="top-button">Chcę się zapisać</a>
-      </div>
+    <div class="top-contact">
+      698 344 977
+      <a href="#formularz">Chcę się zapisać</a>
     </div>
+    <h1>Piotr Ożóg</h1>
+    <p>Korepetycje z chemii i biologii – przygotowanie do matury</p>
   </header>
 
   <section class="section">
@@ -124,6 +148,19 @@
         <li>✔ Pomoc w bieżącym materiale z chemii i biologii (szkoła średnia)</li>
         <li>✔ Lekcje online – przez Zoom/Google Meet</li>
       </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Cennik</h2>
+    <div class="price-box">
+      <p class="bold">✔ Cena za 60 minut zajęć: 90 zł</p>
+      <p class="bold">✔ Pierwsza lekcja gratis</p>
+      <p>✔ Dla wszystkich uczniów klas I–IV szkoły średniej oraz szkoły podstawowej</p>
+      <p>✔ Profesjonalne przygotowanie do egzaminów</p>
+      <p>✔ Dla poziomu podstawowego oraz rozszerzonego</p>
+      <p>✔ Kontakt również poza lekcjami – zawsze możesz do mnie napisać</p>
+      <p>✔ Bez zobowiązań – w każdej chwili możesz zrezygnować</p>
     </div>
   </section>
 
@@ -159,19 +196,6 @@
   </section>
 
   <section class="section">
-    <h2>Cennik</h2>
-    <div class="contact-box">
-      <div class="pricing-item">✔ Cena za 60 minut zajęć: 90 zł</div>
-      <div class="pricing-item"><strong>✔ Pierwsza lekcja gratis</strong></div>
-      <div class="pricing-item">✔ Dla wszystkich uczniów klas I–IV szkoły średniej oraz szkoły podstawowej</div>
-      <div class="pricing-item">✔ Profesjonalne przygotowanie do egzaminów</div>
-      <div class="pricing-item">✔ Dla poziomu podstawowego oraz rozszerzonego</div>
-      <div class="pricing-item">✔ Kontakt również poza lekcjami – zawsze możesz do mnie napisać</div>
-      <div class="pricing-item">✔ Bez zobowiązań – w każdej chwili możesz zrezygnować</div>
-    </div>
-  </section>
-
-  <section class="section">
     <h2>Kontakt</h2>
     <div class="contact-box">
       <p><strong>E-mail:</strong> <a href="mailto:piotrek.ozog11@gmail.com">piotrek.ozog11@gmail.com</a></p>
@@ -185,3 +209,4 @@
 
 </body>
 </html>
+
