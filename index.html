@@ -17,9 +17,6 @@
       padding: 2rem;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-    }
     .section {
       padding: 2rem;
       max-width: 900px;
@@ -100,8 +97,8 @@
     <h2>Zarezerwuj zajęcia</h2>
     <div class="form-box">
       <form action="https://formsubmit.co/piotrek.ozog11@gmail.com" method="POST">
-        <!-- Prawidłowy redirect -->
-        <input type="hidden" name="_redirect" value="thankyou.html">
+        <!-- Pełny URL do przekierowania -->
+        <input type="hidden" name="_redirect" value="https://piotr12098.github.io/moja-strona/thankyou.html">
         <input type="hidden" name="_captcha" value="false">
 
         <label for="name">Imię i nazwisko</label>
@@ -120,8 +117,8 @@
           <option value="Biologia">Biologia</option>
         </select>
 
-        <label for="message">Dodatkowe informacje (opcjonalnie)</label>
-        <textarea id="message" name="Dodatkowe informacje" rows="4" placeholder="Np. poziom nauczania, preferowane godziny, inne uwagi..."></textarea>
+        <label for="message">Dodatkowe informacje</label>
+        <textarea id="message" name="Dodatkowe informacje" rows="4"></textarea>
 
         <button type="submit">Zarezerwuj zajęcia</button>
       </form>
@@ -142,3 +139,4 @@
 
 </body>
 </html>
+
