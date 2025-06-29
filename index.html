@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -101,7 +100,10 @@
     <h2>Zarezerwuj zajęcia</h2>
     <div class="form-box">
       <form action="https://formsubmit.co/piotrek.ozog11@gmail.com" method="POST">
-  <input type="hidden" name="_next" value="thankyou.html">
+        <!-- Prawidłowy redirect -->
+        <input type="hidden" name="_redirect" value="thankyou.html">
+        <input type="hidden" name="_captcha" value="false">
+
         <label for="name">Imię i nazwisko</label>
         <input type="text" id="name" name="Imię i nazwisko" required>
 
