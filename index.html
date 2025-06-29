@@ -19,48 +19,43 @@
     header {
       background-color: #4CAF50;
       color: white;
+      padding: 0.5rem 1rem;
       display: flex;
       align-items: center;
-      padding: 1rem 2rem;
-      gap: 2rem;
-      min-height: 100px;
+      justify-content: space-between;
+      min-height: 40px;
     }
 
-    /* Lewa kolumna: duży obraz na szerokość 45% */
-    header .logo-container {
-      flex: 0 0 45%;
-      max-width: 45%;
+    .logo-container {
+      flex: 0 0 20%;
+      max-width: 20%;
     }
 
-    header .logo-container img {
+    .logo-container img {
       width: 100%;
-      height: auto;
-      border-radius: 8px;
+      max-height: 40px;
       object-fit: contain;
     }
 
-    /* Prawa kolumna: tekst i nawigacja */
-    header .header-content {
+    .header-content {
       flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
       text-align: center;
-      gap: 0.5rem;
     }
 
-    header .header-content h1 {
+    .header-content h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 1.4rem;
     }
 
-    header .header-content p {
+    .header-content p {
       margin: 0;
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
-    header .header-content strong {
-      font-size: 1.2rem;
+    .header-content strong {
+      font-size: 1rem;
+      display: block;
+      margin-top: 0.3rem;
     }
 
     .nav-buttons {
@@ -86,8 +81,6 @@
       background-color: #fff;
       color: #388e3c;
     }
-
-    /* Reszta kodu bez zmian ... */
 
     .section {
       padding: 2rem;
@@ -193,101 +186,23 @@
 
   <header>
     <div class="logo-container">
-      <img src="foto1.png" alt="Logo Piotr Ożóg" />
+      <img src="foto1.png" alt="Logo">
     </div>
     <div class="header-content">
       <h1>Piotr Ożóg</h1>
       <p>Korepetycje z chemii i biologii – przygotowanie do matury</p>
       <strong>📞 698 344 977</strong>
-      <div class="nav-buttons">
-        <a href="#formularz" class="top-button">Chcę się zapisać</a>
-        <a href="#cennik" class="top-button">Cennik</a>
-        <a href="#o-mnie" class="top-button">O mnie</a>
-        <a href="#kontakt" class="top-button">Kontakt</a>
-      </div>
     </div>
   </header>
 
-  <section class="section">
-    <h2>Twoja pomoc w przygotowaniu do egzaminów</h2>
-    <div class="contact-box">
-      <p class="highlight-text">Zapraszam was na zajęcia z chemii oraz biologii. Wspólnie możemy osiągnąć <strong>Twój cel!</strong></p>
-    </div>
-  </section>
+  <div class="nav-buttons">
+    <a href="#formularz" class="top-button">Chcę się zapisać</a>
+    <a href="#cennik" class="top-button">Cennik</a>
+    <a href="#o-mnie" class="top-button">O mnie</a>
+    <a href="#kontakt" class="top-button">Kontakt</a>
+  </div>
 
-  <section class="section" id="o-mnie">
-    <h2>O mnie</h2>
-    <div class="contact-box clearfix">
-      <img src="foto.jpg" alt="Piotr Ożóg" class="profile" />
-      <p>Jestem studentem II roku kierunku lekarskiego.</p>
-      <p>Jestem laureatem dwóch olimpiad chemicznych organizowanych przez AGH oraz UJ.</p>
-      <p>Od 5 lat pomagam uczniom przygotować się do matury z chemii i biologii.</p>
-      <p>Mogę się pochwalić tym, że moja zeszłoroczna uczennica została finalistką Olimpiady Biologicznej dla szkół podstawowych.</p>
-      <p>Prowadzę również kanał na YouTube, na którym omawiam materiał z chemii – <a href="https://www.youtube.com/@pietja731" target="_blank">sprawdź mój kanał</a>.</p>
-    </div>
-  </section>
-
-  <section class="section" id="formularz">
-    <h2>Zarezerwuj zajęcia</h2>
-
-    <div class="info-above-form">
-      Jeśli chciałbyś omówić się na pierwsze zajęcia, wypełnij ten formularz lub zadzwoń na numer <strong>698 344 977</strong>.<br>
-      <strong>Pierwsza lekcja jest całkowicie darmowa.</strong>
-    </div>
-
-    <div class="form-box">
-      <form action="https://formsubmit.co/piotrek.ozog11@gmail.com" method="POST">
-        <input type="hidden" name="_redirect" value="https://piotr12098.github.io/moja-strona/thankyou.html">
-        <input type="hidden" name="_captcha" value="false">
-
-        <label for="name">Imię i nazwisko</label>
-        <input type="text" id="name" name="Imię i nazwisko" required>
-
-        <label for="phone">Numer telefonu</label>
-        <input type="tel" id="phone" name="Telefon" required>
-
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="Email" required>
-
-        <label for="subject">Przedmiot</label>
-        <select id="subject" name="Przedmiot" required>
-          <option value="">-- Wybierz przedmiot --</option>
-          <option value="Chemia">Chemia</option>
-          <option value="Biologia">Biologia</option>
-        </select>
-
-        <label for="message">Dodatkowe informacje</label>
-        <textarea id="message" name="Dodatkowe informacje" rows="4"></textarea>
-
-        <button type="submit">Zarezerwuj zajęcia</button>
-      </form>
-    </div>
-  </section>
-
-  <section class="section" id="cennik">
-    <h2>Cennik</h2>
-    <div class="contact-box">
-      <div class="pricing-item">✔ Cena za 60 minut zajęć: 90 zł</div>
-      <div class="pricing-item"><strong>✔ Pierwsza lekcja gratis</strong></div>
-      <div class="pricing-item">✔ Dla wszystkich uczniów klas I–IV szkoły średniej oraz szkoły podstawowej</div>
-      <div class="pricing-item">✔ Profesjonalne przygotowanie do egzaminów</div>
-      <div class="pricing-item">✔ Dla poziomu podstawowego oraz rozszerzonego</div>
-      <div class="pricing-item">✔ Kontakt również poza lekcjami – zawsze możesz do mnie napisać</div>
-      <div class="pricing-item">✔ Bez zobowiązań – w każdej chwili możesz zrezygnować</div>
-    </div>
-  </section>
-
-  <section class="section" id="kontakt">
-    <h2>Kontakt</h2>
-    <div class="contact-box">
-      <p><strong>E-mail:</strong> <a href="mailto:piotrek.ozog11@gmail.com">piotrek.ozog11@gmail.com</a></p>
-      <p><strong>Telefon:</strong> <a href="tel:698344977">698 344 977</a></p>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 Piotr Ożóg – Korepetycje z chemii i biologii
-  </footer>
+  <!-- Dalej możesz wkleić sekcje: o mnie, formularz, cennik, kontakt, stopkę – bez zmian -->
 
 </body>
 </html>
