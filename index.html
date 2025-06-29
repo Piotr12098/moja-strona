@@ -20,7 +20,21 @@
       background-color: #4CAF50;
       color: white;
       padding: 1.5rem;
-      text-align: center;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .header-photo {
+      max-width: 120px;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    .header-text {
+      flex: 1;
     }
 
     .nav-buttons {
@@ -151,14 +165,17 @@
 <body>
 
   <header>
-    <h1>Piotr Ożóg</h1>
-    <p>Korepetycje z chemii i biologii – przygotowanie do matury</p>
-    <strong style="font-size: 1.1rem;">📞 698 344 977</strong>
-    <div class="nav-buttons">
-      <a href="#formularz" class="top-button">Chcę się zapisać</a>
-      <a href="#cennik" class="top-button">Cennik</a>
-      <a href="#o-mnie" class="top-button">O mnie</a>
-      <a href="#kontakt" class="top-button">Kontakt</a>
+    <img src="foto1.png" alt="Piotr Ożóg" class="header-photo" />
+    <div class="header-text">
+      <h1>Piotr Ożóg</h1>
+      <p>Korepetycje z chemii i biologii – przygotowanie do matury</p>
+      <strong style="font-size: 1.1rem;">📞 698 344 977</strong>
+      <div class="nav-buttons">
+        <a href="#formularz" class="top-button">Chcę się zapisać</a>
+        <a href="#cennik" class="top-button">Cennik</a>
+        <a href="#o-mnie" class="top-button">O mnie</a>
+        <a href="#kontakt" class="top-button">Kontakt</a>
+      </div>
     </div>
   </header>
 
