@@ -28,7 +28,7 @@
     }
 
     .header-logo {
-      height: 108px; /* powiększone o 40% względem 90px */
+      height: 117px; /* powiększone o 30% względem 90px */
       width: auto;
       margin-right: 1.5rem;
     }
@@ -80,7 +80,6 @@
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       margin-top: 1rem;
-      overflow: visible;
     }
 
     form input, form textarea, form select, form button {
@@ -112,11 +111,13 @@
     }
 
     img.profile {
-      max-width: 224px; /* powiększone o 40% względem 160px */
+      max-width: 160px;
       border-radius: 12px;
       float: right;
-      margin-left: 2rem; /* przesunięte bardziej w prawo */
+      margin-left: 1.5rem;
       margin-top: 0.2rem;
+      transform: scale(1.4);
+      transition: transform 0.3s ease;
     }
 
     .highlight-text {
@@ -146,7 +147,6 @@
       clear: both;
     }
 
-    /* Nowy styl dla komunikatu nad formularzem */
     .info-above-form {
       font-size: 1.2rem;
       font-weight: 600;
@@ -243,13 +243,13 @@
   <section class="section" id="cennik">
     <h2>Cennik</h2>
     <div class="contact-box">
-      <ul style="list-style: none; padding-left: 0; margin: 0;">
-        <li class="pricing-item">✔ Cena za 60 minut zajęć: 90 zł</li>
-        <li class="pricing-item"><strong>✔ Pierwsza lekcja gratis</strong></li>
-        <li class="pricing-item">✔ Dla wszystkich uczniów – powtórka materiału i odpowiedzi na pytania</li>
-        <li class="pricing-item">✔ Możliwość zajęć indywidualnych lub w małych grupach</li>
-        <li class="pricing-item">✔ Elastyczne godziny zajęć dopasowane do ucznia</li>
-      </ul>
+      <div class="pricing-item">✔ Cena za 60 minut zajęć: 90 zł</div>
+      <div class="pricing-item"><strong>✔ Pierwsza lekcja gratis</strong></div>
+      <div class="pricing-item">✔ Dla wszystkich uczniów klas I–IV szkoły średniej oraz szkoły podstawowej</div>
+      <div class="pricing-item">✔ Profesjonalne przygotowanie do egzaminów</div>
+      <div class="pricing-item">✔ Dla poziomu podstawowego oraz rozszerzonego</div>
+      <div class="pricing-item">✔ Kontakt również poza lekcjami – zawsze możesz do mnie napisać</div>
+      <div class="pricing-item">✔ Bez zobowiązań – w każdej chwili możesz zrezygnować</div>
     </div>
   </section>
 
