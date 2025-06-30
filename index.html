@@ -5,303 +5,245 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Piotr Ożóg – Korepetycje</title>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f0f9f3;
-      color: #333;
+      font-family: Arial, sans-serif;
+      background-color: #f0fff0;
     }
 
     header {
-      background-color: #4CAF50;
+      background-color: #3cb043;
       color: white;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .header-logo {
-      height: 117px;
-      width: auto;
-      margin-left: 1rem;
-    }
-
-    .header-content {
       text-align: center;
-      flex: 1 1 300px;
-      min-width: 250px;
-      margin: 0 1rem;
+      padding: 20px;
+      position: relative;
     }
 
-    .header-placeholder {
-      height: 117px;
-      width: 117px;
-      background-color: #4CAF50;
-      margin-right: 1rem;
-      flex-shrink: 0;
+    .logo-left,
+    .logo-right {
+      position: absolute;
+      top: 20px;
+      width: 60px;
+      height: 60px;
     }
 
-    .nav-buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1rem;
+    .logo-left {
+      left: 20px;
     }
 
-    .top-button {
-      padding: 0.6rem 1rem;
-      background-color: white;
-      color: #4CAF50;
-      border-radius: 8px;
-      font-weight: bold;
+    .logo-right {
+      right: 20px;
+    }
+
+    header h1 {
+      margin: 10px 0 0;
+      font-size: 28px;
+    }
+
+    header p {
+      margin: 5px 0 10px;
+      font-size: 18px;
+    }
+
+    .phone {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
       text-decoration: none;
-      border: 2px solid white;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    .top-button:hover {
-      background-color: #fff;
-      color: #388e3c;
-    }
-
-    .section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .section h2 {
-      color: #4CAF50;
-      text-align: center;
-    }
-
-    .contact-box, .form-box {
-      background-color: #fff;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      margin-top: 1rem;
-    }
-
-    form input, form textarea, form select, form button {
-      width: 100%;
-      padding: 0.8rem;
-      margin-top: 0.5rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-
-    form button {
-      background-color: #4CAF50;
-      color: white;
-      cursor: pointer;
+      background-color: white;
+      color: #3cb043;
+      padding: 10px 16px;
+      margin: 4px;
+      border-radius: 10px;
+      font-weight: bold;
+      display: inline-block;
       transition: background-color 0.3s;
     }
 
-    form button:hover {
-      background-color: #45a049;
+    nav a:hover {
+      background-color: #e6ffe6;
     }
 
-    footer {
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
       text-align: center;
-      padding: 1rem;
-      background-color: #f0f0f0;
-      font-size: 0.9rem;
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #3cb043;
     }
 
-    .about-container {
+    .about-content {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
+      flex-direction: row;
       align-items: flex-start;
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      gap: 20px;
     }
 
-    .about-container img {
-      max-width: 220px;
-      border-radius: 12px;
-      flex-shrink: 0;
+    .about-content img {
+      max-width: 200px;
+      border-radius: 10px;
+      height: auto;
     }
 
     .about-text {
       flex: 1;
-      min-width: 200px;
     }
 
-    .highlight-text {
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #2f7c44;
-      margin-bottom: 1rem;
+    .about-text p {
+      margin-bottom: 15px;
+      font-size: 16px;
     }
 
-    .pricing-item {
-      background-color: #e6f7ec;
-      padding: 1rem;
-      margin-bottom: 1.2rem;
+    .pricing {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .pricing ul {
+      list-style-type: none;
+      padding: 0;
+      font-size: 16px;
+    }
+
+    .pricing li {
+      margin-bottom: 10px;
+    }
+
+    .contact-form {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-form label {
+      display: block;
+      margin: 12px 0 4px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .contact-form button {
+      background-color: #3cb043;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 16px;
       border-radius: 10px;
-      font-size: 1.05rem;
-      transition: transform 0.3s ease;
+      font-size: 16px;
+      cursor: pointer;
     }
 
-    .pricing-item:hover {
-      transform: scale(1.03);
+    .contact-form button:hover {
+      background-color: #2e8b3c;
     }
 
-    .info-above-form {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #2f7c44;
-      background-color: #e6f7ec;
-      padding: 1rem 1.2rem;
-      border-radius: 10px;
-      margin-bottom: 1.5rem;
-      font-family: 'Georgia', serif;
-      line-height: 1.4;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(47,124,68,0.15);
-    }
-
-    .info-above-form strong {
-      font-weight: 700;
-      color: #1b4d27;
-    }
-
-    @media (max-width: 600px) {
-      header {
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-content {
         flex-direction: column;
         text-align: center;
       }
 
-      .header-logo,
-      .header-placeholder {
-        margin: 0 auto;
-        margin-bottom: 1rem;
+      .logo-left,
+      .logo-right {
+        display: none;
       }
 
-      .about-container {
-        flex-direction: column;
-        align-items: center;
+      nav a {
+        display: block;
+        margin: 8px auto;
+        width: 80%;
       }
+    }
 
-      .about-container img {
-        max-width: 100%;
-      }
-
-      .about-text {
-        text-align: justify;
-      }
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="foto2.png" alt="Logo" class="header-logo">
-    <div class="header-content">
-      <h1>Piotr Ożóg</h1>
-      <p>Korepetycje z chemii i biologii – przygotowanie do matury</p>
-      <strong style="font-size: 1.1rem;">📞 698 344 977</strong>
-      <div class="nav-buttons">
-        <a href="#formularz" class="top-button">Chcę się zapisać</a>
-        <a href="#cennik" class="top-button">Cennik</a>
-        <a href="#o-mnie" class="top-button">O mnie</a>
-        <a href="#kontakt" class="top-button">Kontakt</a>
-      </div>
-    </div>
-    <div class="header-placeholder"></div>
+    <img src="foto2.png" alt="Logo" class="logo-left" />
+    <img src="foto2.png" alt="Logo" class="logo-right" />
+    <h1>Piotr Ożóg</h1>
+    <p>Korepetycje z chemii i biologii – przygotowanie do matury</p>
+    <div class="phone">📞 698 344 977</div>
+    <nav>
+      <a href="#zapisz">Chcę się zapisać</a>
+      <a href="#cennik">Cennik</a>
+      <a href="#omnie">O mnie</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
   </header>
 
-  <section class="section">
-    <h2>Twoja pomoc w przygotowaniu do egzaminów</h2>
-    <div class="contact-box">
-      <p class="highlight-text">Zapraszam was na zajęcia z chemii oraz biologii. Wspólnie możemy osiągnąć <strong>Twój cel!</strong></p>
-    </div>
-  </section>
-
-  <section class="section" id="o-mnie">
-    <h2>O mnie</h2>
-    <div class="contact-box about-container">
-      <img src="foto.jpg" alt="Piotr Ożóg">
+  <section id="omnie">
+    <h2 class="section-title">O mnie</h2>
+    <div class="about-content">
+      <img src="foto2.png" alt="Zdjęcie Piotra">
       <div class="about-text">
         <p>Jestem studentem II roku kierunku lekarskiego.</p>
         <p>Jestem laureatem dwóch olimpiad chemicznych organizowanych przez AGH oraz UJ.</p>
         <p>Od 5 lat pomagam uczniom przygotować się do matury z chemii i biologii.</p>
-        <p>Moja zeszłoroczna uczennica została finalistką Olimpiady Biologicznej dla szkół podstawowych.</p>
-        <p>Prowadzę również kanał na YouTube, na którym omawiam materiał z chemii – <a href="https://www.youtube.com/@pietja731" target="_blank">sprawdź mój kanał</a>.</p>
+        <p>Mogę się pochwalić tym, że moja zeszłoroczna uczennica została finalistką Olimpiady Biologicznej dla szkół podstawowych.</p>
+        <p>Prowadzę również kanał na YouTube, na którym omawiam materiał z chemii – <a href="https://youtube.com/" target="_blank">sprawdź mój kanał</a>.</p>
       </div>
     </div>
   </section>
 
-  <section class="section" id="formularz">
-    <h2>Zarezerwuj zajęcia</h2>
-
-    <div class="info-above-form">
-      Jeśli chciałbyś omówić się na pierwsze zajęcia, wypełnij ten formularz lub zadzwoń na numer <strong>698 344 977</strong>.<br>
-      <strong>Pierwsza lekcja jest całkowicie darmowa.</strong>
+  <section id="cennik">
+    <h2 class="section-title">Cennik</h2>
+    <div class="pricing">
+      <ul>
+        <li>✅ Lekcja indywidualna – 120 zł / 60 minut</li>
+        <li>✅ Przygotowanie do matury rozszerzonej</li>
+        <li>✅ Możliwość zajęć online lub stacjonarnie</li>
+        <li>✅ Materiały PDF w cenie zajęć</li>
+      </ul>
     </div>
+  </section>
 
-    <div class="form-box">
-      <form action="https://formsubmit.co/piotrek.ozog11@gmail.com" method="POST">
-        <input type="hidden" name="_next" value="https://piotr12098.github.io/moja-strona/thankyou.html">
-        <input type="hidden" name="_captcha" value="false">
+  <section id="kontakt">
+    <h2 class="section-title">Kontakt</h2>
+    <div class="contact-form">
+      <form name="contact" method="POST" data-netlify="true" action="thankyou.html">
+        <input type="hidden" name="form-name" value="contact" />
+        <label for="name">Imię i nazwisko:</label>
+        <input type="text" id="name" name="name" required />
 
-        <label for="name">Imię i nazwisko</label>
-        <input type="text" id="name" name="Imię i nazwisko" required>
+        <label for="email">Adres e-mail:</label>
+        <input type="email" id="email" name="email" required />
 
-        <label for="phone">Numer telefonu</label>
-        <input type="tel" id="phone" name="Telefon" required>
+        <label for="message">Wiadomość:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="Email" required>
-
-        <label for="subject">Przedmiot</label>
-        <select id="subject" name="Przedmiot" required>
-          <option value="">-- Wybierz przedmiot --</option>
-          <option value="Chemia">Chemia</option>
-          <option value="Biologia">Biologia</option>
-        </select>
-
-        <label for="message">Dodatkowe informacje</label>
-        <textarea id="message" name="Dodatkowe informacje" rows="4"></textarea>
-
-        <button type="submit">Zarezerwuj zajęcia</button>
+        <button type="submit">Wyślij wiadomość</button>
       </form>
     </div>
   </section>
-
-  <section class="section" id="cennik">
-    <h2>Cennik</h2>
-    <div class="contact-box">
-      <div class="pricing-item">✔ Cena za 60 minut zajęć: 90 zł</div>
-      <div class="pricing-item"><strong>✔ Pierwsza lekcja gratis</strong></div>
-      <div class="pricing-item">✔ Dla wszystkich uczniów klas I–IV szkoły średniej oraz szkoły podstawowej</div>
-      <div class="pricing-item">✔ Profesjonalne przygotowanie do egzaminów</div>
-      <div class="pricing-item">✔ Dla poziomu podstawowego oraz rozszerzonego</div>
-      <div class="pricing-item">✔ Kontakt również poza lekcjami – zawsze możesz do mnie napisać</div>
-      <div class="pricing-item">✔ Bez zobowiązań – w każdej chwili możesz zrezygnować</div>
-    </div>
-  </section>
-
-  <section class="section" id="kontakt">
-    <h2>Kontakt</h2>
-    <div class="contact-box">
-      <p><strong>E-mail:</strong> <a href="mailto:piotrek.ozog11@gmail.com">piotrek.ozog11@gmail.com</a></p>
-      <p><strong>Telefon:</strong> <a href="tel:698344977">698 344 977</a></p>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 Piotr Ożóg – Korepetycje z chemii i biologii
-  </footer>
-
 </body>
 </html>
