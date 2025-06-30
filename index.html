@@ -34,16 +34,17 @@
 
     .header-content {
       text-align: center;
-      flex: 1 1 auto;
+      flex: 1 1 300px;
       min-width: 250px;
+      margin: 0 1rem;
     }
 
     .header-placeholder {
       height: 117px;
-      width: auto;
-      aspect-ratio: 1 / 1;
+      width: 117px;
       background-color: #4CAF50;
       margin-right: 1rem;
+      flex-shrink: 0;
     }
 
     .nav-buttons {
@@ -117,11 +118,22 @@
       font-size: 0.9rem;
     }
 
-    img.profile {
-      max-width: 224px;
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .about-container img {
+      max-width: 220px;
       border-radius: 12px;
-      float: right;
-      margin-left: 1rem;
+      flex-shrink: 0;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 200px;
     }
 
     .highlight-text {
@@ -144,12 +156,6 @@
       transform: scale(1.03);
     }
 
-    .clearfix::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
     .info-above-form {
       font-size: 1.2rem;
       font-weight: 600;
@@ -167,6 +173,32 @@
     .info-above-form strong {
       font-weight: 700;
       color: #1b4d27;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-logo,
+      .header-placeholder {
+        margin: 0 auto;
+        margin-bottom: 1rem;
+      }
+
+      .about-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-container img {
+        max-width: 100%;
+      }
+
+      .about-text {
+        text-align: justify;
+      }
     }
   </style>
 </head>
@@ -197,13 +229,15 @@
 
   <section class="section" id="o-mnie">
     <h2>O mnie</h2>
-    <div class="contact-box clearfix">
-      <img src="foto.jpg" alt="Piotr Ożóg" class="profile">
-      <p>Jestem studentem II roku kierunku lekarskiego.</p>
-      <p>Jestem laureatem dwóch olimpiad chemicznych organizowanych przez AGH oraz UJ.</p>
-      <p>Od 5 lat pomagam uczniom przygotować się do matury z chemii i biologii.</p>
-      <p>Mogę się pochwalić tym, że moja zeszłoroczna uczennica została finalistką Olimpiady Biologicznej dla szkół podstawowych.</p>
-      <p>Prowadzę również kanał na YouTube, na którym omawiam materiał z chemii – <a href="https://www.youtube.com/@pietja731" target="_blank">sprawdź mój kanał</a>.</p>
+    <div class="contact-box about-container">
+      <img src="foto.jpg" alt="Piotr Ożóg">
+      <div class="about-text">
+        <p>Jestem studentem II roku kierunku lekarskiego.</p>
+        <p>Jestem laureatem dwóch olimpiad chemicznych organizowanych przez AGH oraz UJ.</p>
+        <p>Od 5 lat pomagam uczniom przygotować się do matury z chemii i biologii.</p>
+        <p>Moja zeszłoroczna uczennica została finalistką Olimpiady Biologicznej dla szkół podstawowych.</p>
+        <p>Prowadzę również kanał na YouTube, na którym omawiam materiał z chemii – <a href="https://www.youtube.com/@pietja731" target="_blank">sprawdź mój kanał</a>.</p>
+      </div>
     </div>
   </section>
 
